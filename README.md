@@ -1,7 +1,6 @@
 # mycode (Project Title)
 
-One Paragraph of your project description goes here. Describe what you're trying to do.
-What is the purpose of putting up this repo?
+The purpose of this project is to learn how to version control projects with git.
 
 ## Getting Started
 
@@ -11,8 +10,8 @@ on a live system.
 
 ### Prerequisites
 
-What things are needed to install the software and how to install them. For now, maybe copy in
-"how to install python and python3 using apt."
+Install Python 3.x.x
+A Github account
 
 ## Built With
 
@@ -20,4 +19,4 @@ What things are needed to install the software and how to install them. For now,
 
 ## Authors
 
-* **Your Name** - *Initial work* - [YourWebsite](https://example.com/)
+* **Joselin Campoverde** - *Initial work* - [YourWebsite](https://example.com/)
