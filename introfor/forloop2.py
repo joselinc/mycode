@@ -7,6 +7,7 @@ def main():
 
     for farm in farms:
         print(farm.get("name"), "has", end=":\n")
+        #print(farm.get("agriculture"))
         for items in farm.get("agriculture"):
             print(" -", items)
     print("\nThis is the end of the loop.")
