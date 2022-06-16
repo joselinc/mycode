@@ -7,9 +7,9 @@ def main():
     with open("farms.yaml", "r") as farmlife:
         farms = yaml.safe_load(farmlife)
         print(farms)
-    
-    #print title in bold green
-    print(crayons.green("Old Mac has 3 farms, they are:", bold=True))
+    #starts a counter to count number of farms
+    counter = 0 
+
     # farm will be equal to one of the dict within the list "farms"
     for farm in farms:
         #print name of the farms in bold yellow
@@ -18,6 +18,10 @@ def main():
         for agri in farm.get('agriculture'):
             #print agriculture in bold blue
             print(crayons.blue(" - "+ agri, bold=True))
+        #counter increases by 1 until loop is over
+        counter = counter + 1
+    #prints number of farms Old Mac has
+    print(crayons.green(f"Old Mac has {counter} farms, ee i ee i o", bold=True))
 
 main()
 
