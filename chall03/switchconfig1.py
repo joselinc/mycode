@@ -2,7 +2,6 @@
 
 import time
 import os
-from subprocess import call
 import yaml
 import crayons
 
@@ -17,13 +16,13 @@ def switchstatus():
     with open("switchconfig", "r") as switchdata:
         myswitches = yaml.safe_load(switchdata)
 
-        print(f"There are {switchcount(myswitches)} switches to configure\n")
+        print(crayons.red(f"There are {switchcount(myswitches)} switches to configure", bold=True))
         
         for switch in myswitches:
-            print(f"Connecting to {switch.get('switchname')} via {switch.get('sshtarget')} ")
+            print(crayons.white(f"\nConnecting to {switch.get('switchname')} via {switch.get('sshtarget')} ", bold=True))
             for i in range(8):
                 time.sleep(.25)
-                print(".", end="")
+                print(crayons.yellow(".", bold=True))
             print(crayons.green("Connected!", bold=True))
             for commands in switch.get('commands'):
                 print(crayons.blue(f"Sending: {commands.get('command')} {commands.get('subcommand')}", bold=True))
